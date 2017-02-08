@@ -1,9 +1,8 @@
-﻿namespace Repository
+﻿namespace Repository.Adapter
 {
-    // Adapter
     using System.Collections.Generic;
 
-    using Domain;
+    using Domain.Adapter;
 
     public class CustomerRepository : ICustomerRepository
     {

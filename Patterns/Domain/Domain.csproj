@@ -40,9 +40,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Customer.cs" />
-    <Compile Include="ICustomerRepository.cs" />
+    <Compile Include="Strategy\Address.cs" />
+    <Compile Include="Adapter\Customer.cs" />
+    <Compile Include="Strategy\Alternative\ShippingCostCalculatorService.cs" />
+    <Compile Include="Strategy\FedexShippingStrategy.cs" />
+    <Compile Include="Adapter\ICustomerRepository.cs" />
+    <Compile Include="Strategy\IShippingStrategy.cs" />
+    <Compile Include="Strategy\Order.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Strategy\Problem\ShippingCostCalculatorService.cs" />
+    <Compile Include="Strategy\SchenkerShippingStrategy.cs" />
+    <Compile Include="Strategy\ShippingCostCalculatorService.cs" />
+    <Compile Include="Strategy\ShippingOptions.cs" />
+    <Compile Include="Strategy\UpsShippingStrategy.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

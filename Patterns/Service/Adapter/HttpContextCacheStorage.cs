@@ -1,6 +1,5 @@
-﻿namespace Service
+﻿namespace Service.Adapter
 {
-    // Adapter
     using System.Web;
 
     public class HttpContextCacheStorage : ICacheStorage

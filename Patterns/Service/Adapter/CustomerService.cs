@@ -1,9 +1,8 @@
-﻿namespace Service
+﻿namespace Service.Adapter
 {
-    // Adapter
     using System.Collections.Generic;
 
-    using Domain;
+    using Domain.Adapter;
 
     public class CustomerService
     {

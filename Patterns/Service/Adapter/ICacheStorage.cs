@@ -1,6 +1,5 @@
-﻿namespace Service
+﻿namespace Service.Adapter
 {
-    // Adapter
     public interface ICacheStorage
     {
         void Remove(string key);

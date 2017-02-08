@@ -1,4 +1,4 @@
-﻿namespace Domain
+﻿namespace Domain.Adapter
 {
     // Adapter
     using System.Collections.Generic;

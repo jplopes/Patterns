@@ -41,9 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CustomerService.cs" />
-    <Compile Include="HttpContextCacheStorage.cs" />
-    <Compile Include="ICacheStorage.cs" />
+    <Compile Include="Adapter\CustomerService.cs" />
+    <Compile Include="Adapter\HttpContextCacheStorage.cs" />
+    <Compile Include="Adapter\ICacheStorage.cs" />
+    <Compile Include="Adapter\Problem\CustomerService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
