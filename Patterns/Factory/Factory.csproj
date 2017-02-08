@@ -4,15 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{200DCA02-2AE2-4C40-99ED-DE5C1779480E}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{464648DE-D674-4B9F-9BFC-B47F6D96CE50}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Service</RootNamespace>
-    <AssemblyName>Service</AssemblyName>
+    <RootNamespace>Factory</RootNamespace>
+    <AssemblyName>Factory</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +24,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -32,7 +35,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,18 +43,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Adapter\CustomerService.cs" />
-    <Compile Include="Adapter\HttpContextCacheStorage.cs" />
-    <Compile Include="Adapter\ICacheStorage.cs" />
-    <Compile Include="Adapter\Problem\CustomerService.cs" />
-    <Compile Include="NullObject\NullObjectCache.cs" />
+    <Compile Include="Car.cs" />
+    <Compile Include="IMachine.cs" />
+    <Compile Include="MachineFactory.cs" />
+    <Compile Include="MicrowaveOven.cs" />
+    <Compile Include="Problem\Program.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Robot.cs" />
+    <Compile Include="UnknownMachine.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Domain\Domain.csproj">
-      <Project>{4E09D41A-BFC5-48CE-BBD7-B6EA3E4BF923}</Project>
-      <Name>Domain</Name>
-    </ProjectReference>
+    <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
