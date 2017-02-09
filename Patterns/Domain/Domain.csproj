@@ -46,6 +46,13 @@
   <ItemGroup>
     <Compile Include="Singleton\Singleton.cs" />
     <Compile Include="Singleton\TheadSafeSingleton.cs" />
+    <Compile Include="State\CanceledState.cs" />
+    <Compile Include="State\IOrderState.cs" />
+    <Compile Include="State\NewState.cs" />
+    <Compile Include="State\Order.cs" />
+    <Compile Include="State\OrderStatus.cs" />
+    <Compile Include="State\Problem\Problem.cs" />
+    <Compile Include="State\ShippedState.cs" />
     <Compile Include="Strategy\Address.cs" />
     <Compile Include="Adapter\Customer.cs" />
     <Compile Include="Strategy\Alternative\ShippingCostCalculatorService.cs" />
