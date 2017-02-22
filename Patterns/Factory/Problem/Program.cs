@@ -4,7 +4,7 @@
 
     public class Program
     {
-        private static void Main_problem(string[] args)
+        private static void MainProblem(string[] args)
         {
             string description = args[0];
             IMachine machine = GetMachine(description);

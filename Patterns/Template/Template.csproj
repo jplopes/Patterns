@@ -4,15 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4E09D41A-BFC5-48CE-BBD7-B6EA3E4BF923}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{55CC537A-86A5-4AA6-BB2C-2B080309D595}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Domain</RootNamespace>
-    <AssemblyName>Domain</AssemblyName>
+    <RootNamespace>Template</RootNamespace>
+    <AssemblyName>Template</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +24,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -30,10 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,36 +43,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ChainOfResponsibility\ApprovalResponse.cs" />
-    <Compile Include="ChainOfResponsibility\Employee.cs" />
-    <Compile Include="ChainOfResponsibility\ExpenseReport.cs" />
-    <Compile Include="ChainOfResponsibility\IExpenseApprover.cs" />
-    <Compile Include="ChainOfResponsibility\IExpenseReport.cs" />
-    <Compile Include="Singleton\Singleton.cs" />
-    <Compile Include="Singleton\TheadSafeSingleton.cs" />
-    <Compile Include="State\CanceledState.cs" />
-    <Compile Include="State\IOrderState.cs" />
-    <Compile Include="State\NewState.cs" />
-    <Compile Include="State\Order.cs" />
-    <Compile Include="State\OrderStatus.cs" />
-    <Compile Include="State\Problem\Problem.cs" />
-    <Compile Include="State\ShippedState.cs" />
-    <Compile Include="Strategy\Address.cs" />
-    <Compile Include="Adapter\Customer.cs" />
-    <Compile Include="Strategy\Alternative\ShippingCostCalculatorService.cs" />
-    <Compile Include="Strategy\FedexShippingStrategy.cs" />
-    <Compile Include="Adapter\ICustomerRepository.cs" />
-    <Compile Include="Strategy\IShippingStrategy.cs" />
-    <Compile Include="Strategy\Order.cs" />
+    <Compile Include="FedExOrderShipment.cs" />
+    <Compile Include="OrderShipment.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Strategy\Problem\ShippingCostCalculatorService.cs" />
-    <Compile Include="Strategy\SchenkerShippingStrategy.cs" />
-    <Compile Include="Strategy\ShippingCostCalculatorService.cs" />
-    <Compile Include="Strategy\ShippingOptions.cs" />
-    <Compile Include="Strategy\UpsShippingStrategy.cs" />
+    <Compile Include="UpsOrderShipment.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
