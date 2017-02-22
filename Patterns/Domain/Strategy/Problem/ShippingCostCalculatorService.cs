@@ -9,30 +9,30 @@
             switch (order.ShippingMethod)
             {
                 case ShippingOptions.FedEx:
-                    return CalculateForFedEx(order);
+                    return this.CalculateForFedEx(order);
 
                 case ShippingOptions.UPS:
-                    return CalculateForUPS(order);
+                    return this.CalculateForUPS(order);
 
                 case ShippingOptions.Schenker:
-                    return CalculateForSchenker(order);
+                    return this.CalculateForSchenker(order);
 
                 default:
                     throw new Exception("Unknown carrier");
             }
         }
 
-        double CalculateForSchenker(Order order)
+        private double CalculateForSchenker(Order order)
         {
             return 3.00d;
         }
 
-        double CalculateForUPS(Order order)
+        private double CalculateForUPS(Order order)
         {
             return 4.25d;
         }
 
-        double CalculateForFedEx(Order order)
+        private double CalculateForFedEx(Order order)
         {
             return 5.00d;
         }

@@ -7,11 +7,11 @@
 
     public class CustomerService
     {
-        private readonly ICustomerRepository _customerRepository;
+        private readonly ICustomerRepository customerRepository;
 
         public CustomerService(ICustomerRepository customerRepository)
         {
-            _customerRepository = customerRepository;
+            this.customerRepository = customerRepository;
         }
 
         public IList<Customer> GetAllCustomers()
@@ -21,7 +21,7 @@
             customers = (List<Customer>)HttpContext.Current.Cache.Get(storageKey);
             if (customers == null)
             {
-                customers = _customerRepository.GetCustomers();
+                customers = this.customerRepository.GetCustomers();
                 HttpContext.Current.Cache.Insert(storageKey, customers);
             }
 

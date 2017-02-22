@@ -1,6 +1,5 @@
 ﻿namespace Domain.Strategy
 {
-
     public enum ShippingOptions
     {
         UPS = 100,

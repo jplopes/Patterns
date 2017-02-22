@@ -4,16 +4,16 @@
 
     public class CostCalculationService
     {
-        private readonly IShippingStrategy _shippingStrategy;
+        private readonly IShippingStrategy shippingStrategy;
 
         public CostCalculationService(IShippingStrategy shippingStrategy)
         {
-            _shippingStrategy = shippingStrategy;
+            this.shippingStrategy = shippingStrategy;
         }
 
         public double CalculateShippingCost(Order order)
         {
-            return _shippingStrategy.Calculate(order);
+            return this.shippingStrategy.Calculate(order);
         }
     }
 }

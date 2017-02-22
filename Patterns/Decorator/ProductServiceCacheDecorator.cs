@@ -22,8 +22,10 @@
             else
             {
                 IEnumerable<Product> products = this.ProductService.GetProducts();
-                CacheItemPolicy policy = new CacheItemPolicy();
-                policy.AbsoluteExpiration = new DateTimeOffset(DateTime.Now.AddMinutes(1));
+                CacheItemPolicy policy = new CacheItemPolicy
+                {
+                    AbsoluteExpiration = new DateTimeOffset(DateTime.Now.AddMinutes(1))
+                };
                 cache.Add(key, products, policy);
                 return products;
             }

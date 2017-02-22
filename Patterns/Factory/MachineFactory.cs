@@ -18,7 +18,10 @@
         {
             Type t = this.GetTypeToCreate(description);
 
-            if (t == null) return new UnknownMachine();
+            if (t == null)
+            {
+                return new UnknownMachine();
+            }
 
             return Activator.CreateInstance(t) as IMachine;
         }

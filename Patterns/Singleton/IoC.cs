@@ -4,16 +4,16 @@
 
     public static class IoC
     {
-        private static IUnityContainer _container;
+        private static IUnityContainer container;
 
         public static void Initialize(IUnityContainer container)
         {
-            _container = container;
+            IoC.container = container;
         }
 
         public static TBase Resolve<TBase>()
         {
-            return _container.Resolve<TBase>();
+            return container.Resolve<TBase>();
         }
     }
 }

@@ -2,6 +2,14 @@
 {
     public class NewState : IOrderState
     {
+        public OrderStatus Status
+        {
+            get
+            {
+                return OrderStatus.New;
+            }
+        }
+
         public bool CanShip(Order order)
         {
             return true;
@@ -22,14 +30,6 @@
         {
             // actual cancellation logic ignored, only changing the status;
             order.Change(new CanceledState());
-        }
-
-        public OrderStatus Status
-        {
-            get
-            {
-                return OrderStatus.New;
-            }
         }
     }
 }

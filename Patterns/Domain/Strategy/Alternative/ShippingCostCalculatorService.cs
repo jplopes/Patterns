@@ -4,7 +4,7 @@
 
     public class ShippingCostCalculatorService
     {
-        private Func<Order, double> upsStrategy = delegate (Order order) { return 4.00d; };
+        private Func<Order, double> upsStrategy = order => 4.00d;
 
         public double CalculateShippingCost(Order order, Func<Order, double> shippingCostStrategy)
         {
