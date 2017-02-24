@@ -36,6 +36,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,6 +50,9 @@
     <Compile Include="ChainOfResponsibility\ExpenseReport.cs" />
     <Compile Include="ChainOfResponsibility\IExpenseApprover.cs" />
     <Compile Include="ChainOfResponsibility\IExpenseReport.cs" />
+    <Compile Include="Flyweight\BlueWindow.cs" />
+    <Compile Include="Flyweight\IWindow.cs" />
+    <Compile Include="Flyweight\WindowFactory.cs" />
     <Compile Include="Singleton\Singleton.cs" />
     <Compile Include="Singleton\TheadSafeSingleton.cs" />
     <Compile Include="State\CanceledState.cs" />
