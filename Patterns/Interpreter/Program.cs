@@ -3,7 +3,7 @@
     using System;
     using System.Collections.Generic;
 
-    class Program
+    public class Program
     {
         public static void Main(string[] args)
         {
@@ -17,8 +17,7 @@
                 new WheatBread());
 
             sandhich.Interpret(new Context());
-
-
+            
             Console.ReadKey();
         }
     }
