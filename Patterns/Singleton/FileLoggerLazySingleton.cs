@@ -1,5 +1,6 @@
 ﻿namespace Singleton
 {
+    using System.Diagnostics.CodeAnalysis;
     using System.IO;
 
     public class FileLoggerLazySingleton : IFileLogger
@@ -40,6 +41,7 @@
         {
             internal static readonly FileLoggerLazySingleton TheInstance = new FileLoggerLazySingleton();
 
+            [SuppressMessage("StyleCop.CSharp.MaintainabilityRules", "SA1409:RemoveUnnecessaryCode", Justification = "Reviewed. Suppression is OK here.")]
             static Nested()
             {
             }
