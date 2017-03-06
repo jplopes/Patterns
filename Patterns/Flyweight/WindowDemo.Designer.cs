@@ -1,11 +1,13 @@
 ﻿namespace Flyweight
 {
-    partial class WindowDemo
+    public partial class WindowDemo
     {
         /// <summary>
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
+
+        private System.Windows.Forms.Label lblObjectCounter;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -13,10 +15,11 @@
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
-            if (disposing && (components != null))
+            if (disposing && (this.components != null))
             {
-                components.Dispose();
+                this.components.Dispose();
             }
+
             base.Dispose(disposing);
         }
 
@@ -30,17 +33,17 @@
         {
             this.lblObjectCounter = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
+            //
             // lblObjectCounter
-            // 
+            //
             this.lblObjectCounter.AutoSize = true;
             this.lblObjectCounter.Location = new System.Drawing.Point(12, 9);
             this.lblObjectCounter.Name = "lblObjectCounter";
             this.lblObjectCounter.Size = new System.Drawing.Size(0, 13);
             this.lblObjectCounter.TabIndex = 0;
-            // 
+            //
             // WindowDemo
-            // 
+            //
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 262);
@@ -54,8 +57,5 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblObjectCounter;
     }
 }
-
