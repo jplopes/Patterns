@@ -32,6 +32,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mediator", "Mediator\Mediat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flyweight", "Flyweight\Flyweight.csproj", "{0A7B30A3-AF54-477C-9E33-1217EB83752C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Facade", "Facade\Facade.csproj", "{D67487BA-0F86-453E-9554-114B898FA354}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -86,6 +88,10 @@ Global
 		{0A7B30A3-AF54-477C-9E33-1217EB83752C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0A7B30A3-AF54-477C-9E33-1217EB83752C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0A7B30A3-AF54-477C-9E33-1217EB83752C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D67487BA-0F86-453E-9554-114B898FA354}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D67487BA-0F86-453E-9554-114B898FA354}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D67487BA-0F86-453E-9554-114B898FA354}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D67487BA-0F86-453E-9554-114B898FA354}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
